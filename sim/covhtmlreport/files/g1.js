@@ -1,0 +1,2 @@
+var g_data = {"9":{"pr":"/test_pkg","ty":2,"dui":2,"dun":"work.test_pkg","cvgs":[{"h":["\\/test_pkg::scoreboard::fcov1 ",2,1,15,10],"cov":[30,30,100.00],"opts":{"goal":"100","per_instance":"true"}},{"h":["/test_pkg/scoreboard/fcov1",1,1,10],"cov":[30,30,100.00],"opts":{"goal":"100","merge_instance":"auto(true)"}}]}};
+processCovergroupsData(g_data);

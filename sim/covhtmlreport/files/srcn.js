@@ -1,0 +1,2 @@
+var g_data = ["","../rtl/shifter_if.sv","../test/test_pkg.sv","../tb/scoreboard.sv","../wr_agt_top/write_xtn.sv","../wr_agt_top/wr_agent_config.sv","../rd_agt_top/rd_agent_config.sv","../tb/env_config.sv","../wr_agt_top/wr_driver.sv","../wr_agt_top/wr_monitor.sv","../wr_agt_top/wr_sequencer.sv","../wr_agt_top/wr_agent.sv","../wr_agt_top/wr_agt_top.sv","../wr_agt_top/wr_seqs.sv","../rd_agt_top/rd_monitor.sv","../rd_agt_top/rd_agent.sv","../rd_agt_top/rd_agt_top.sv","../tb/env.sv","../test/test.sv","../tb/top.sv","../rtl/barrel_shifter.v"];
+processSrcNamesData(g_data);

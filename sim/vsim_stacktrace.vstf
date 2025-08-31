@@ -1,0 +1,280 @@
+# Current time Sun Aug 31 12:28:18 2025
+# Program = vsim
+# Id = "2022.1_2"
+# Version = "2022.04"
+# Date = "Apr  2 2022"
+# Platform = "linux_x86_64"
+# Signature = c889f28ca6b6c4b4f4c7f8e9576ef100
+# 0    0x00007feff224acf7: '../tb/scoreboard.sv:30'
+# 1    0x00007feff224a93e: '../tb/scoreboard.sv:30'
+# 2    0x00007feff224c8e8: '../tb/scoreboard.sv:74'
+# 3    0x00007feff224ce4f: '../tb/scoreboard.sv:85'
+# 4    0x00007feff1d16ccf: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:245'
+# 5    0x00007feff1d1412f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh:150'
+# 6    0x0000000003582012: '<unknown (@0x3582012)>'
+# 7    0x00000000006bb4c4: '<unknown (@0x6bb4c4)>'
+# 8    0x00000000004ce1bc: '<unknown (@0x4ce1bc)>'
+# 9    0x00000000006fcd53: '<unknown (@0x6fcd53)>'
+# 10   0x0000000000c313bd: '<unknown (@0xc313bd)>'
+# 11   0x0000000000c3654b: '<unknown (@0xc3654b)>'
+# 12   0x0000000000c382ae: '<unknown (@0xc382ae)>'
+# 13   0x0000000000f0e4cd: '<unknown (@0xf0e4cd)>'
+# 14   0x0000000003a40b8d: '<unknown (@0x3a40b8d)>'
+# 15   0x0000000003a44fe6: '<unknown (@0x3a44fe6)>'
+# 16   0x0000000003a466d1: '<unknown (@0x3a466d1)>'
+# 17   0x0000000003a46a36: '<unknown (@0x3a46a36)>'
+# 18   0x00000000011964b9: '<unknown (@0x11964b9)>'
+# 19   0x0000000003ae693f: '<unknown (@0x3ae693f)>'
+# 20   0x0000000003b3a4b7: '<unknown (@0x3b3a4b7)>'
+# 21   0x0000000003afd3a7: '<unknown (@0x3afd3a7)>'
+# 22   0x0000000003afd689: '<unknown (@0x3afd689)>'
+# 23   0x00000000038d4add: '<unknown (@0x38d4add)>'
+# 24   0x0000000000bfadec: '<unknown (@0xbfadec)>'
+# End of Stack Trace
+
+
+# Current time Sun Aug 31 12:31:03 2025
+# Program = vsim
+# Id = "2022.1_2"
+# Version = "2022.04"
+# Date = "Apr  2 2022"
+# Platform = "linux_x86_64"
+# Signature = c889f28ca6b6c4b4f4c7f8e9576ef100
+# 0    0x00007feff224acf7: '../tb/scoreboard.sv:30'
+# 1    0x00007feff224a93e: '../tb/scoreboard.sv:30'
+# 2    0x00007feff224c8e8: '../tb/scoreboard.sv:74'
+# 3    0x00007feff224ce4f: '../tb/scoreboard.sv:85'
+# 4    0x00007feff1d16ccf: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:245'
+# 5    0x00007feff1d1412f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh:150'
+# 6    0x0000000003582012: '<unknown (@0x3582012)>'
+# 7    0x00000000006bb4c4: '<unknown (@0x6bb4c4)>'
+# 8    0x00000000004ce1bc: '<unknown (@0x4ce1bc)>'
+# 9    0x00000000006fcd53: '<unknown (@0x6fcd53)>'
+# 10   0x0000000000c313bd: '<unknown (@0xc313bd)>'
+# 11   0x0000000000c3654b: '<unknown (@0xc3654b)>'
+# 12   0x0000000000c382ae: '<unknown (@0xc382ae)>'
+# 13   0x0000000000f0e4cd: '<unknown (@0xf0e4cd)>'
+# 14   0x0000000003a40b8d: '<unknown (@0x3a40b8d)>'
+# 15   0x0000000003a44fe6: '<unknown (@0x3a44fe6)>'
+# 16   0x0000000003a466d1: '<unknown (@0x3a466d1)>'
+# 17   0x0000000003a46a36: '<unknown (@0x3a46a36)>'
+# 18   0x00000000011964b9: '<unknown (@0x11964b9)>'
+# 19   0x0000000003ae693f: '<unknown (@0x3ae693f)>'
+# 20   0x0000000003b3a4b7: '<unknown (@0x3b3a4b7)>'
+# 21   0x0000000003afd3a7: '<unknown (@0x3afd3a7)>'
+# 22   0x0000000003afd689: '<unknown (@0x3afd689)>'
+# 23   0x00000000038d4add: '<unknown (@0x38d4add)>'
+# 24   0x0000000000bfadec: '<unknown (@0xbfadec)>'
+# End of Stack Trace
+
+
+# Current time Sun Aug 31 12:34:16 2025
+# Program = vsim
+# Id = "2022.1_2"
+# Version = "2022.04"
+# Date = "Apr  2 2022"
+# Platform = "linux_x86_64"
+# Signature = c889f28ca6b6c4b4f4c7f8e9576ef100
+# 0    0x00007feff2247c57: '../tb/scoreboard.sv:30'
+# 1    0x00007feff2247abe: '../tb/scoreboard.sv:30'
+# 2    0x00007feff2249848: '../tb/scoreboard.sv:74'
+# 3    0x00007feff2249daf: '../tb/scoreboard.sv:85'
+# 4    0x00007feff1d152af: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:245'
+# 5    0x00007feff1d1270f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh:150'
+# 6    0x0000000003582012: '<unknown (@0x3582012)>'
+# 7    0x00000000006bb4c4: '<unknown (@0x6bb4c4)>'
+# 8    0x00000000004ce1bc: '<unknown (@0x4ce1bc)>'
+# 9    0x00000000006fcd53: '<unknown (@0x6fcd53)>'
+# 10   0x0000000000c313bd: '<unknown (@0xc313bd)>'
+# 11   0x0000000000c3654b: '<unknown (@0xc3654b)>'
+# 12   0x0000000000c382ae: '<unknown (@0xc382ae)>'
+# 13   0x0000000000f0e4cd: '<unknown (@0xf0e4cd)>'
+# 14   0x0000000003a40b8d: '<unknown (@0x3a40b8d)>'
+# 15   0x0000000003a44fe6: '<unknown (@0x3a44fe6)>'
+# 16   0x0000000003a466d1: '<unknown (@0x3a466d1)>'
+# 17   0x0000000003a46a36: '<unknown (@0x3a46a36)>'
+# 18   0x00000000011964b9: '<unknown (@0x11964b9)>'
+# 19   0x0000000003ae693f: '<unknown (@0x3ae693f)>'
+# 20   0x0000000003b3a4b7: '<unknown (@0x3b3a4b7)>'
+# 21   0x0000000003afd3a7: '<unknown (@0x3afd3a7)>'
+# 22   0x0000000003afd689: '<unknown (@0x3afd689)>'
+# 23   0x00000000038d4add: '<unknown (@0x38d4add)>'
+# 24   0x0000000000bfadec: '<unknown (@0xbfadec)>'
+# End of Stack Trace
+
+
+# Current time Sun Aug 31 12:36:34 2025
+# Program = vsim
+# Id = "2022.1_2"
+# Version = "2022.04"
+# Date = "Apr  2 2022"
+# Platform = "linux_x86_64"
+# Signature = c889f28ca6b6c4b4f4c7f8e9576ef100
+# 0    0x00007feff2247c67: '../tb/scoreboard.sv:31'
+# 1    0x00007feff2247ace: '../tb/scoreboard.sv:31'
+# 2    0x00007feff2249848: '../tb/scoreboard.sv:75'
+# 3    0x00007feff2249daf: '../tb/scoreboard.sv:86'
+# 4    0x00007feff1d1531f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:245'
+# 5    0x00007feff1d1277f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh:150'
+# 6    0x0000000003582012: '<unknown (@0x3582012)>'
+# 7    0x00000000006bb4c4: '<unknown (@0x6bb4c4)>'
+# 8    0x00000000004ce1bc: '<unknown (@0x4ce1bc)>'
+# 9    0x00000000006fcd53: '<unknown (@0x6fcd53)>'
+# 10   0x0000000000c313bd: '<unknown (@0xc313bd)>'
+# 11   0x0000000000c3654b: '<unknown (@0xc3654b)>'
+# 12   0x0000000000c382ae: '<unknown (@0xc382ae)>'
+# 13   0x0000000000f0e4cd: '<unknown (@0xf0e4cd)>'
+# 14   0x0000000003a40b8d: '<unknown (@0x3a40b8d)>'
+# 15   0x0000000003a44fe6: '<unknown (@0x3a44fe6)>'
+# 16   0x0000000003a466d1: '<unknown (@0x3a466d1)>'
+# 17   0x0000000003a46a36: '<unknown (@0x3a46a36)>'
+# 18   0x00000000011964b9: '<unknown (@0x11964b9)>'
+# 19   0x0000000003ae693f: '<unknown (@0x3ae693f)>'
+# 20   0x0000000003b3a4b7: '<unknown (@0x3b3a4b7)>'
+# 21   0x0000000003afd3a7: '<unknown (@0x3afd3a7)>'
+# 22   0x0000000003afd689: '<unknown (@0x3afd689)>'
+# 23   0x00000000038d4add: '<unknown (@0x38d4add)>'
+# 24   0x0000000000bfadec: '<unknown (@0xbfadec)>'
+# End of Stack Trace
+
+
+# Current time Sun Aug 31 12:40:54 2025
+# Program = vsim
+# Id = "2022.1_2"
+# Version = "2022.04"
+# Date = "Apr  2 2022"
+# Platform = "linux_x86_64"
+# Signature = c889f28ca6b6c4b4f4c7f8e9576ef100
+# 0    0x00007feff2247d07: '../tb/scoreboard.sv:30'
+# 1    0x00007feff2247b6e: '../tb/scoreboard.sv:30'
+# 2    0x00007feff22498f0: '../tb/scoreboard.sv:77'
+# 3    0x00007feff2249e5f: '../tb/scoreboard.sv:88'
+# 4    0x00007feff1d1531f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:245'
+# 5    0x00007feff1d1277f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh:150'
+# 6    0x0000000003582012: '<unknown (@0x3582012)>'
+# 7    0x00000000006bb4c4: '<unknown (@0x6bb4c4)>'
+# 8    0x00000000004ce1bc: '<unknown (@0x4ce1bc)>'
+# 9    0x00000000006fcd53: '<unknown (@0x6fcd53)>'
+# 10   0x0000000000c313bd: '<unknown (@0xc313bd)>'
+# 11   0x0000000000c3654b: '<unknown (@0xc3654b)>'
+# 12   0x0000000000c382ae: '<unknown (@0xc382ae)>'
+# 13   0x0000000000f0e4cd: '<unknown (@0xf0e4cd)>'
+# 14   0x0000000003a40b8d: '<unknown (@0x3a40b8d)>'
+# 15   0x0000000003a44fe6: '<unknown (@0x3a44fe6)>'
+# 16   0x0000000003a466d1: '<unknown (@0x3a466d1)>'
+# 17   0x0000000003a46a36: '<unknown (@0x3a46a36)>'
+# 18   0x00000000011964b9: '<unknown (@0x11964b9)>'
+# 19   0x0000000003ae693f: '<unknown (@0x3ae693f)>'
+# 20   0x0000000003b3a4b7: '<unknown (@0x3b3a4b7)>'
+# 21   0x0000000003afd3a7: '<unknown (@0x3afd3a7)>'
+# 22   0x0000000003afd689: '<unknown (@0x3afd689)>'
+# 23   0x00000000038d4add: '<unknown (@0x38d4add)>'
+# 24   0x0000000000bfadec: '<unknown (@0xbfadec)>'
+# End of Stack Trace
+
+
+# Current time Sun Aug 31 12:43:05 2025
+# Program = vsim
+# Id = "2022.1_2"
+# Version = "2022.04"
+# Date = "Apr  2 2022"
+# Platform = "linux_x86_64"
+# Signature = c889f28ca6b6c4b4f4c7f8e9576ef100
+# 0    0x00007feff2247c97: '../tb/scoreboard.sv:30'
+# 1    0x00007feff2247afe: '../tb/scoreboard.sv:30'
+# 2    0x00007feff2249880: '../tb/scoreboard.sv:77'
+# 3    0x00007feff2249def: '../tb/scoreboard.sv:88'
+# 4    0x00007feff1d1531f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:245'
+# 5    0x00007feff1d1277f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh:150'
+# 6    0x0000000003582012: '<unknown (@0x3582012)>'
+# 7    0x00000000006bb4c4: '<unknown (@0x6bb4c4)>'
+# 8    0x00000000004ce1bc: '<unknown (@0x4ce1bc)>'
+# 9    0x00000000006fcd53: '<unknown (@0x6fcd53)>'
+# 10   0x0000000000c313bd: '<unknown (@0xc313bd)>'
+# 11   0x0000000000c3654b: '<unknown (@0xc3654b)>'
+# 12   0x0000000000c382ae: '<unknown (@0xc382ae)>'
+# 13   0x0000000000f0e4cd: '<unknown (@0xf0e4cd)>'
+# 14   0x0000000003a40b8d: '<unknown (@0x3a40b8d)>'
+# 15   0x0000000003a44fe6: '<unknown (@0x3a44fe6)>'
+# 16   0x0000000003a466d1: '<unknown (@0x3a466d1)>'
+# 17   0x0000000003a46a36: '<unknown (@0x3a46a36)>'
+# 18   0x00000000011964b9: '<unknown (@0x11964b9)>'
+# 19   0x0000000003ae693f: '<unknown (@0x3ae693f)>'
+# 20   0x0000000003b3a4b7: '<unknown (@0x3b3a4b7)>'
+# 21   0x0000000003afd3a7: '<unknown (@0x3afd3a7)>'
+# 22   0x0000000003afd689: '<unknown (@0x3afd689)>'
+# 23   0x00000000038d4add: '<unknown (@0x38d4add)>'
+# 24   0x0000000000bfadec: '<unknown (@0xbfadec)>'
+# End of Stack Trace
+
+
+# Current time Sun Aug 31 12:45:29 2025
+# Program = vsim
+# Id = "2022.1_2"
+# Version = "2022.04"
+# Date = "Apr  2 2022"
+# Platform = "linux_x86_64"
+# Signature = c889f28ca6b6c4b4f4c7f8e9576ef100
+# 0    0x00007feff2247d87: '../tb/scoreboard.sv:30'
+# 1    0x00007feff2247bee: '../tb/scoreboard.sv:30'
+# 2    0x00007feff2249970: '../tb/scoreboard.sv:77'
+# 3    0x00007feff2249edf: '../tb/scoreboard.sv:88'
+# 4    0x00007feff1d1536f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:245'
+# 5    0x00007feff1d127cf: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh:150'
+# 6    0x0000000003582012: '<unknown (@0x3582012)>'
+# 7    0x00000000006bb4c4: '<unknown (@0x6bb4c4)>'
+# 8    0x00000000004ce1bc: '<unknown (@0x4ce1bc)>'
+# 9    0x00000000006fcd53: '<unknown (@0x6fcd53)>'
+# 10   0x0000000000c313bd: '<unknown (@0xc313bd)>'
+# 11   0x0000000000c3654b: '<unknown (@0xc3654b)>'
+# 12   0x0000000000c382ae: '<unknown (@0xc382ae)>'
+# 13   0x0000000000f0e4cd: '<unknown (@0xf0e4cd)>'
+# 14   0x0000000003a40b8d: '<unknown (@0x3a40b8d)>'
+# 15   0x0000000003a44fe6: '<unknown (@0x3a44fe6)>'
+# 16   0x0000000003a466d1: '<unknown (@0x3a466d1)>'
+# 17   0x0000000003a46a36: '<unknown (@0x3a46a36)>'
+# 18   0x00000000011964b9: '<unknown (@0x11964b9)>'
+# 19   0x0000000003ae693f: '<unknown (@0x3ae693f)>'
+# 20   0x0000000003b3a4b7: '<unknown (@0x3b3a4b7)>'
+# 21   0x0000000003afd3a7: '<unknown (@0x3afd3a7)>'
+# 22   0x0000000003afd689: '<unknown (@0x3afd689)>'
+# 23   0x00000000038d4add: '<unknown (@0x38d4add)>'
+# 24   0x0000000000bfadec: '<unknown (@0xbfadec)>'
+# End of Stack Trace
+
+
+# Current time Sun Aug 31 12:46:38 2025
+# Program = vsim
+# Id = "2022.1_2"
+# Version = "2022.04"
+# Date = "Apr  2 2022"
+# Platform = "linux_x86_64"
+# Signature = c889f28ca6b6c4b4f4c7f8e9576ef100
+# 0    0x00007feff2247cc7: '../tb/scoreboard.sv:30'
+# 1    0x00007feff2247b2e: '../tb/scoreboard.sv:30'
+# 2    0x00007feff22498b0: '../tb/scoreboard.sv:77'
+# 3    0x00007feff2249ccf: '../tb/scoreboard.sv:87'
+# 4    0x00007feff1d1523f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_common_phases.svh:245'
+# 5    0x00007feff1d1269f: '/home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_task_phase.svh:150'
+# 6    0x0000000003582012: '<unknown (@0x3582012)>'
+# 7    0x00000000006bb4c4: '<unknown (@0x6bb4c4)>'
+# 8    0x00000000004ce1bc: '<unknown (@0x4ce1bc)>'
+# 9    0x00000000006fcd53: '<unknown (@0x6fcd53)>'
+# 10   0x0000000000c313bd: '<unknown (@0xc313bd)>'
+# 11   0x0000000000c3654b: '<unknown (@0xc3654b)>'
+# 12   0x0000000000c382ae: '<unknown (@0xc382ae)>'
+# 13   0x0000000000f0e4cd: '<unknown (@0xf0e4cd)>'
+# 14   0x0000000003a40b8d: '<unknown (@0x3a40b8d)>'
+# 15   0x0000000003a44fe6: '<unknown (@0x3a44fe6)>'
+# 16   0x0000000003a466d1: '<unknown (@0x3a466d1)>'
+# 17   0x0000000003a46a36: '<unknown (@0x3a46a36)>'
+# 18   0x00000000011964b9: '<unknown (@0x11964b9)>'
+# 19   0x0000000003ae693f: '<unknown (@0x3ae693f)>'
+# 20   0x0000000003b3a4b7: '<unknown (@0x3b3a4b7)>'
+# 21   0x0000000003afd3a7: '<unknown (@0x3afd3a7)>'
+# 22   0x0000000003afd689: '<unknown (@0x3afd689)>'
+# 23   0x00000000038d4add: '<unknown (@0x38d4add)>'
+# 24   0x0000000000bfadec: '<unknown (@0xbfadec)>'
+# End of Stack Trace
+
+

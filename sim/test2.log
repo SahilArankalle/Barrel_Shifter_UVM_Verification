@@ -1,0 +1,2697 @@
+# vsim -cvgperinstance -vopt -voptargs="+acc" -coverage -sva -c -do " log -r /* ;coverage save -onexit mem_cov2;run -all; exit" -wlf wave_file2.wlf -l test2.log -sv_seed random work.top "+UVM_TESTNAME=cover_test" 
+# Start time: 14:55:46 on Aug 31,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2022.1_2 linux_x86_64 Apr  2 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.shifter_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.test_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.shifter_if(fast__2)
+# Loading work.shifter_if(fast__3)
+# Loading work.barrel_shifter(fast)
+# Loading /home/cad/eda/Mentor_Graphics/Questasim/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# Sv_Seed = 696809732
+#  log -r /* 
+# coverage save -onexit mem_cov2
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test cover_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 cover_test                  -     @476 
+#   e                          env                         -     @492 
+#     ragt_top                 rd_agt_top                  -     @515 
+#       agnth                  rd_agent                    -     @623 
+#         monh                 rd_monitor                  -     @631 
+#           monitor_port       uvm_analysis_port           -     @638 
+#     sb                       scoreboard                  -     @522 
+#       rd_fifo                uvm_tlm_analysis_fifo #(T)  -     @576 
+#         analysis_export      uvm_analysis_imp            -     @615 
+#         get_ap               uvm_analysis_port           -     @607 
+#         get_peek_export      uvm_get_peek_imp            -     @591 
+#         put_ap               uvm_analysis_port           -     @599 
+#         put_export           uvm_put_imp                 -     @583 
+#       wr_fifo                uvm_tlm_analysis_fifo #(T)  -     @529 
+#         analysis_export      uvm_analysis_imp            -     @568 
+#         get_ap               uvm_analysis_port           -     @560 
+#         get_peek_export      uvm_get_peek_imp            -     @544 
+#         put_ap               uvm_analysis_port           -     @552 
+#         put_export           uvm_put_imp                 -     @536 
+#     wagt_top                 wr_agt_top                  -     @504 
+#       agnth                  wr_agent                    -     @647 
+#         drvh                 wr_driver                   -     @671 
+#           rsp_port           uvm_analysis_port           -     @686 
+#           seq_item_port      uvm_seq_item_pull_port      -     @678 
+#         monh                 wr_monitor                  -     @656 
+#           monitor_port       uvm_analysis_port           -     @663 
+#         seqrh                wr_sequencer                -     @694 
+#           rsp_export         uvm_analysis_export         -     @701 
+#           seq_item_export    uvm_seq_item_pull_imp       -     @795 
+#           arbitration_queue  array                       0     -    
+#           lock_queue         array                       0     -    
+#           num_last_reqs      integral                    32    'd1  
+#           num_last_rsps      integral                    32    'd1  
+# --------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 0: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_0                          write_xtn  -     @825                                      
+#   begin_time                   time       64    0                                         
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b0                                       
+#   shift                        integral   2     2                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 5: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @817 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 5: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 15: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @853 
+#   data     integral   4     'b0  
+#   shift    integral   2     2    
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 15: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=2 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 25: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @821 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 25: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @857 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 25: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 25: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_1                          write_xtn  -     @870                                      
+#   begin_time                   time       64    25                                        
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1                                       
+#   shift                        integral   2     'd0                                       
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 35: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @865 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 35: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 45: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @874 
+#   data     integral   4     'b1  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 45: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1 shift=0 dir=0 => result=0 (expected=1)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 55: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @861 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b1  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 55: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @878 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 55: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 55: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_2                          write_xtn  -     @890                                      
+#   begin_time                   time       64    55                                        
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b10                                      
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 65: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @886 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 65: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 75: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @894 
+#   data     integral   4     'b10 
+#   shift    integral   2     3    
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 75: uvm_test_top.e.sb [SCOREBOARD] PASS: data=10 shift=3 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 85: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @882 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 85: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @898 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 85: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 85: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_3                          write_xtn  -     @910                                      
+#   begin_time                   time       64    85                                        
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b11                                      
+#   shift                        integral   2     'd0                                       
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 95: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @906 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 95: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 105: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @914 
+#   data     integral   4     'b11 
+#   shift    integral   2     'd0  
+#   dir      integral   1     1    
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 105: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=11 shift=0 dir=1 => result=0 (expected=11)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 115: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @902 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b11 
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 115: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @918 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 115: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 115: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_4                          write_xtn  -     @930                                      
+#   begin_time                   time       64    115                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b100                                     
+#   shift                        integral   2     'd1                                       
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 125: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @926 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 125: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 135: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @934 
+#   data     integral   4     'b100
+#   shift    integral   2     'd1  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 135: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=100 shift=1 dir=0 => result=0 (expected=1000)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 145: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_rcvd  write_xtn  -     @922  
+#   data     integral   4     'b0   
+#   shift    integral   2     'd0   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b1000
+# ----------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 145: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @938 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 145: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 145: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_5                          write_xtn  -     @950                                      
+#   begin_time                   time       64    145                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b101                                     
+#   shift                        integral   2     'd1                                       
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 155: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @946 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 155: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 165: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @954 
+#   data     integral   4     'b101
+#   shift    integral   2     'd1  
+#   dir      integral   1     1    
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 165: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=101 shift=1 dir=1 => result=0 (expected=10)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 175: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @942 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b10 
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 175: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @958 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 175: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 175: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_6                          write_xtn  -     @970                                      
+#   begin_time                   time       64    175                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b110                                     
+#   shift                        integral   2     2                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 185: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @966 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 185: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 195: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @974 
+#   data     integral   4     'b110
+#   shift    integral   2     2    
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 195: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=110 shift=2 dir=0 => result=0 (expected=1000)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 205: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_rcvd  write_xtn  -     @962  
+#   data     integral   4     'b0   
+#   shift    integral   2     'd0   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b1000
+# ----------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 205: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @978 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 205: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 205: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_7                          write_xtn  -     @990                                      
+#   begin_time                   time       64    205                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b111                                     
+#   shift                        integral   2     'd1                                       
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 215: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @986 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 215: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 225: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @994 
+#   data     integral   4     'b111
+#   shift    integral   2     'd1  
+#   dir      integral   1     1    
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 225: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=111 shift=1 dir=1 => result=0 (expected=11)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 235: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @982 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b11 
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 235: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @998 
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 235: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 235: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_8                          write_xtn  -     @1010                                     
+#   begin_time                   time       64    235                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1000                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 245: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1006
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 245: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 255: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1014 
+#   data     integral   4     'b1000
+#   shift    integral   2     3     
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 255: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1000 shift=3 dir=1 => result=0 (expected=1)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 265: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1002
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b1  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 265: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1018
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 265: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 265: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_9                          write_xtn  -     @1030                                     
+#   begin_time                   time       64    265                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1001                                    
+#   shift                        integral   2     2                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 275: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1026
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 275: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 285: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1034 
+#   data     integral   4     'b1001
+#   shift    integral   2     2     
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 285: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1001 shift=2 dir=1 => result=0 (expected=10)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 295: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1022
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b10 
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 295: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1038
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 295: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 295: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_10                         write_xtn  -     @1050                                     
+#   begin_time                   time       64    295                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1010                                    
+#   shift                        integral   2     'd0                                       
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 305: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1046
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 305: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 315: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1054 
+#   data     integral   4     'b1010
+#   shift    integral   2     'd0   
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 315: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1010 shift=0 dir=1 => result=0 (expected=1010)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 325: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_rcvd  write_xtn  -     @1042 
+#   data     integral   4     'b0   
+#   shift    integral   2     'd0   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b1010
+# ----------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 325: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1058
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 325: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 325: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_11                         write_xtn  -     @1070                                     
+#   begin_time                   time       64    325                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1011                                    
+#   shift                        integral   2     'd0                                       
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 335: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1066
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 335: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 345: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1074 
+#   data     integral   4     'b1011
+#   shift    integral   2     'd0   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 345: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1011 shift=0 dir=0 => result=0 (expected=1011)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 355: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_rcvd  write_xtn  -     @1062 
+#   data     integral   4     'b0   
+#   shift    integral   2     'd0   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b1011
+# ----------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 355: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1078
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 355: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 355: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_12                         write_xtn  -     @1090                                     
+#   begin_time                   time       64    355                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1100                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 365: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1086
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 365: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 375: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1094 
+#   data     integral   4     'b1100
+#   shift    integral   2     3     
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 375: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1100 shift=3 dir=1 => result=0 (expected=1)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 385: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1082
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b1  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 385: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1098
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 385: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 385: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_13                         write_xtn  -     @1110                                     
+#   begin_time                   time       64    385                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1101                                    
+#   shift                        integral   2     'd1                                       
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 395: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1106
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 395: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 405: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1114 
+#   data     integral   4     'b1101
+#   shift    integral   2     'd1   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 405: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1101 shift=1 dir=0 => result=0 (expected=1010)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 415: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_rcvd  write_xtn  -     @1102 
+#   data     integral   4     'b0   
+#   shift    integral   2     'd0   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b1010
+# ----------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 415: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1118
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 415: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 415: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_14                         write_xtn  -     @1130                                     
+#   begin_time                   time       64    415                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1110                                    
+#   shift                        integral   2     'd1                                       
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 425: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1126
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 425: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 435: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1134 
+#   data     integral   4     'b1110
+#   shift    integral   2     'd1   
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 435: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1110 shift=1 dir=1 => result=0 (expected=111)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 445: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1122
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b111
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 445: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1138
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 445: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 445: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req_15                         write_xtn  -     @1150                                     
+#   begin_time                   time       64    445                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1111                                    
+#   shift                        integral   2     'd1                                       
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 455: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1146
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 455: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 465: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1154 
+#   data     integral   4     'b1111
+#   shift    integral   2     'd1   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 465: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1111 shift=1 dir=0 => result=0 (expected=1110)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 475: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_rcvd  write_xtn  -     @1142 
+#   data     integral   4     'b0   
+#   shift    integral   2     'd0   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b1110
+# ----------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 475: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1158
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 475: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 475: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1170                                     
+#   begin_time                   time       64    475                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b101                                     
+#   shift                        integral   2     'd0                                       
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 485: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1166
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 485: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 495: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1174
+#   data     integral   4     'b101
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 495: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=101 shift=0 dir=0 => result=0 (expected=101)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 505: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1162
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b101
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 505: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1178
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 505: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1170                                     
+#   begin_time                   time       64    475                                       
+#   end_time                     time       64    505                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b101                                     
+#   shift                        integral   2     'd0                                       
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 505: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 505: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1190                                     
+#   begin_time                   time       64    505                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1000                                    
+#   shift                        integral   2     2                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 515: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1186
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 515: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 525: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1194 
+#   data     integral   4     'b1000
+#   shift    integral   2     2     
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 525: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1000 shift=2 dir=1 => result=0 (expected=10)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 535: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1182
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b10 
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 535: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1198
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 535: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1190                                     
+#   begin_time                   time       64    505                                       
+#   end_time                     time       64    535                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1000                                    
+#   shift                        integral   2     2                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 535: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 535: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1210                                     
+#   begin_time                   time       64    535                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1100                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 545: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1206
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 545: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 555: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1214 
+#   data     integral   4     'b1100
+#   shift    integral   2     3     
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 555: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1100 shift=3 dir=1 => result=0 (expected=1)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 565: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1202
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b1  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 565: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1218
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 565: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1210                                     
+#   begin_time                   time       64    535                                       
+#   end_time                     time       64    565                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1100                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 565: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 565: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1230                                     
+#   begin_time                   time       64    565                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1111                                    
+#   shift                        integral   2     2                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 575: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1226
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 575: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 585: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1234 
+#   data     integral   4     'b1111
+#   shift    integral   2     2     
+#   dir      integral   1     'd0   
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 585: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1111 shift=2 dir=0 => result=0 (expected=1100)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 595: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_rcvd  write_xtn  -     @1222 
+#   data     integral   4     'b0   
+#   shift    integral   2     'd0   
+#   dir      integral   1     'd0   
+#   result   integral   4     'b1100
+# ----------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 595: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1238
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 595: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1230                                     
+#   begin_time                   time       64    565                                       
+#   end_time                     time       64    595                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1111                                    
+#   shift                        integral   2     2                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 595: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 595: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1250                                     
+#   begin_time                   time       64    595                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1110                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 605: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1246
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 605: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 615: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1254 
+#   data     integral   4     'b1110
+#   shift    integral   2     3     
+#   dir      integral   1     'd0   
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 615: uvm_test_top.e.sb [SCOREBOARD] PASS: data=1110 shift=3 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 625: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1242
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 625: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1258
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 625: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1250                                     
+#   begin_time                   time       64    595                                       
+#   end_time                     time       64    625                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1110                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 625: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 625: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1270                                     
+#   begin_time                   time       64    625                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1100                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 635: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1266
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 635: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 645: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1274 
+#   data     integral   4     'b1100
+#   shift    integral   2     3     
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 645: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1100 shift=3 dir=1 => result=0 (expected=1)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 655: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1262
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b1  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 655: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1278
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 655: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1270                                     
+#   begin_time                   time       64    625                                       
+#   end_time                     time       64    655                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1100                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 655: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 655: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1290                                     
+#   begin_time                   time       64    655                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1110                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 665: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1286
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 665: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 675: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1294 
+#   data     integral   4     'b1110
+#   shift    integral   2     3     
+#   dir      integral   1     'd0   
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 675: uvm_test_top.e.sb [SCOREBOARD] PASS: data=1110 shift=3 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 685: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1282
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 685: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1298
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 685: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1290                                     
+#   begin_time                   time       64    655                                       
+#   end_time                     time       64    685                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1110                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     'd0                                       
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 685: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 685: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1310                                     
+#   begin_time                   time       64    685                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b10                                      
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 695: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1306
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 695: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 705: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1314
+#   data     integral   4     'b10 
+#   shift    integral   2     3    
+#   dir      integral   1     1    
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 705: uvm_test_top.e.sb [SCOREBOARD] PASS: data=10 shift=3 dir=1 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 715: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1302
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 715: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1318
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 715: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1310                                     
+#   begin_time                   time       64    685                                       
+#   end_time                     time       64    715                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b10                                      
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 715: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 715: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1330                                     
+#   begin_time                   time       64    715                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b101                                     
+#   shift                        integral   2     'd0                                       
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 725: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1326
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 725: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 735: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1334
+#   data     integral   4     'b101
+#   shift    integral   2     'd0  
+#   dir      integral   1     1    
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 735: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=101 shift=0 dir=1 => result=0 (expected=101)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 745: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1322
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b101
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 745: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1338
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 745: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1330                                     
+#   begin_time                   time       64    715                                       
+#   end_time                     time       64    745                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b101                                     
+#   shift                        integral   2     'd0                                       
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 745: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_driver.sv(49) @ 745: uvm_test_top.e.wagt_top.agnth.drvh [WR_DRIVER] Driver sending transaction:
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1350                                     
+#   begin_time                   time       64    745                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1111                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 755: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1346
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 755: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 765: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ----------------------------------
+# Name       Type       Size  Value 
+# ----------------------------------
+# data_sent  write_xtn  -     @1354 
+#   data     integral   4     'b1111
+#   shift    integral   2     3     
+#   dir      integral   1     1     
+#   result   integral   4     'b0   
+# ----------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(81) @ 765: uvm_test_top.e.sb [SCOREBOARD] FAIL: data=1111 shift=3 dir=1 => result=0 (expected=1)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 775: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1342
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b1  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 775: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1358
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_seqs.sv(23) @ 775: uvm_test_top.e.wagt_top.agnth.seqrh@@wseq_c [WRITE_SEQ] Generated write transaction: 
+# ------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value                                     
+# ------------------------------------------------------------------------------------------
+# req                            write_xtn  -     @1350                                     
+#   begin_time                   time       64    745                                       
+#   end_time                     time       64    775                                       
+#   depth                        int        32    'd2                                       
+#   parent sequence (name)       string     6     wseq_c                                    
+#   parent sequence (full name)  string     42    uvm_test_top.e.wagt_top.agnth.seqrh.wseq_c
+#   sequencer                    string     35    uvm_test_top.e.wagt_top.agnth.seqrh       
+#   data                         integral   4     'b1111                                    
+#   shift                        integral   2     3                                         
+#   dir                          integral   1     1                                         
+#   result                       integral   4     'b0                                       
+# ------------------------------------------------------------------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 775: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 785: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1366
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 785: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 795: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1370
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 795: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 805: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1362
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 805: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1374
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 805: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 815: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1382
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 815: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 825: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1386
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 825: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 835: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1378
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 835: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1390
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 835: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 845: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1398
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 845: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 855: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1402
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 855: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 865: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1394
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 865: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1406
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 865: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 875: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1414
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 875: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 885: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1418
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 885: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 895: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1410
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 895: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1422
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 895: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 905: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1430
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 905: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 915: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1434
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 915: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 925: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1426
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 925: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1438
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 925: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 935: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1446
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 935: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 945: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1450
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 945: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 955: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1442
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 955: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1454
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 955: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 965: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1462
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 965: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 975: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1466
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 975: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 985: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1458
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 985: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1470
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 985: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 995: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1478
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 995: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1005: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1482
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1005: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1015: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1474
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1015: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1486
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1015: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1025: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1494
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1025: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1035: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1498
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1035: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1045: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1490
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1045: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1502
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1045: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1055: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1510
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1055: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1065: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1514
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1065: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1075: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1506
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1075: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1518
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1075: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1085: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1526
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1085: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1095: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1530
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1095: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1105: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1522
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1105: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1534
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1105: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1115: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1542
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1115: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1125: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1546
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1125: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1135: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1538
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1135: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1550
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1135: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1145: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1558
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1145: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1155: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1562
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1155: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1165: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1554
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1165: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1566
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1165: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1175: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1574
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1175: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1185: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1578
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1185: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1195: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1570
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1195: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1582
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1195: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1205: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1590
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1205: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1215: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1594
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1215: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1225: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1586
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1225: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1598
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1225: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1235: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1606
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1235: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1245: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1610
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1245: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(55) @ 1255: uvm_test_top.e.ragt_top.agnth.monh [RD_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_rcvd  write_xtn  -     @1602
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1255: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1614
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1255: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(56) @ 1265: uvm_test_top.e.wagt_top.agnth.monh [WR_MONITOR] Transaction collected: 
+#  ---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# data_sent  write_xtn  -     @1622
+#   data     integral   4     'b0  
+#   shift    integral   2     'd0  
+#   dir      integral   1     'd0  
+#   result   integral   4     'b0  
+# ---------------------------------
+# 
+# UVM_INFO ../tb/scoreboard.sv(76) @ 1265: uvm_test_top.e.sb [SCOREBOARD] PASS: data=0 shift=0 dir=0 => result=0 (expected=0)
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1275: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../rd_agt_top/rd_monitor.sv(64) @ 1275: uvm_test_top.e.ragt_top.agnth.monh [rd_monitor] Report: uvm_test_top.e.ragt_top.agnth.monh Collected 42 Transactions
+# UVM_INFO ../tb/scoreboard.sv(104) @ 1275: uvm_test_top.e.sb [SCOREBOARD] Final Report: PASS=106 FAIL=21
+# UVM_INFO ../wr_agt_top/wr_driver.sv(72) @ 1275: uvm_test_top.e.wagt_top.agnth.drvh [wr_driver] Report: write driver sent 26 transactions
+# UVM_INFO ../wr_agt_top/wr_monitor.sv(65) @ 1275: uvm_test_top.e.wagt_top.agnth.monh [wr_monitor] Report: uvm_test_top.e.wagt_top.agnth.monh Collected 127 Transactions
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  341
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RD_MONITOR]    42
+# [RNTST]     1
+# [SCOREBOARD]   128
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [WRITE_SEQ]    10
+# [WR_DRIVER]    26
+# [WR_MONITOR]   127
+# [rd_monitor]     1
+# [wr_driver]     1
+# [wr_monitor]     1
+# ** Note: $finish    : /home/cad/eda/Mentor_Graphics/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1275 ns  Iteration: 54  Instance: /top
+# Saving coverage database on exit...
+# End time: 14:55:47 on Aug 31,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

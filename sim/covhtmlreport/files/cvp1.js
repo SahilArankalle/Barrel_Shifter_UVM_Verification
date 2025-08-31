@@ -1,0 +1,2 @@
+var g_data = {"11":["shift_0","shift_1","shift_2","shift_3"],"12":["left","right"],"13":["vals[0]","vals[1]","vals[2]","vals[3]","vals[4]","vals[5]","vals[6]","vals[7]","vals[8]","vals[9]","vals[10]","vals[11]","vals[12]","vals[13]","vals[14]","vals[15]"],"16":["shift_0","shift_1","shift_2","shift_3"],"17":["left","right"],"18":["vals[0]","vals[1]","vals[2]","vals[3]","vals[4]","vals[5]","vals[6]","vals[7]","vals[8]","vals[9]","vals[10]","vals[11]","vals[12]","vals[13]","vals[14]","vals[15]"]};
+processCoverpointsMapData(g_data);

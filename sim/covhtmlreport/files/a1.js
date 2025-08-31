@@ -1,0 +1,2 @@
+var g_data = {"5":{"pr":"/top","ty":2,"dui":3,"dun":"work.top","asserts":[{"n":["assert__shift_right"],"h":[0,2]},{"n":["assert__shift_left"],"h":[0,2]}],"ad":0},"9":{"pr":"/test_pkg","ty":2,"dui":2,"dun":"work.test_pkg","asserts":[{"n":["wr_seqs/body/#ublk#212492983#18/immed__21"],"h":[0,2]},{"n":["wr_seqs_cover/body/#anonblk#212492983#41#4#/#ublk#212492983#41/immed__44"],"h":[0,1]}],"ad":0}}
+processAssertionsData(g_data);
